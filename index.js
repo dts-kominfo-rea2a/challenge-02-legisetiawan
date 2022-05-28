@@ -23,19 +23,28 @@ function lakukanLooping(arrPegawai) {
 
       Contoh: ["Aisyah Nirmala", "Mansur Faisal", ...]
   */
-  let hasilLooping = null;
+  let hasilLooping = [];
+  for(let namaPegawai of arrPegawai){
+    hasilLooping.push(`${namaPegawai.namaDepan} ${namaPegawai.namaBelakang}`)
+  }
 
   /*
     TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
       yang berisi jumlah pria dari masing masing pegawai
   */
-  let jumlahPria = null;
+  let jumlahPria = 0;
+  for (const jumlah of arrPegawai) {
+    jumlah.jenisKelamin === 'M' && jumlahPria++
+  }
 
   /*
     TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
       yang berisi jumlah wanita dari masing masing pegawai
   */
-  let jumlahWanita = null;
+  let jumlahWanita = 0;
+  for (const jumlah of arrPegawai) {
+    jumlah.jenisKelamin === 'F' && jumlahWanita++
+  }
 
   /*
     TODO 4: Buatlah sebuah variabel bernama "komentar"
